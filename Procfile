@@ -1,1 +1,1 @@
-web: python editPhoto.py
+web: python streamlitPhoto.py
