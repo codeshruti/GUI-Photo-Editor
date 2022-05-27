@@ -9,14 +9,6 @@ st.markdown(""" <style> .font {
     font-size:35px ; font-family: 'Cooper Black'; color: #FF9633;} 
     </style> """, unsafe_allow_html=True)
 st.markdown('<p class="font">Upload your photo here...</p>', unsafe_allow_html=True)
-def download_img():
-	with open("flower.png", "rb") as file:
-		btn = st.download_button(
-             label="Edited image",
-             data=file,
-             file_name="edit.png",
-             mime="image/png"
-           )
 uploaded_file = st.file_uploader("", type=['jpg','png','jpeg'])
 if uploaded_file is not None:
 	image = Image.open(uploaded_file)
